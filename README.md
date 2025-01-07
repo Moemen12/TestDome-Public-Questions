@@ -5,7 +5,7 @@ A collection of TestDome questions and their solutions.
 ## Table of Contents
 
 - [Game Platform (Speed Calculator)](#game-platform)
-- [Reorder Tasks)](#reorder-tasks
+- [Reorder Tasks](#reorder-tasks)
 <!-- Add more questions as they come -->
 
 ## Game Platform
