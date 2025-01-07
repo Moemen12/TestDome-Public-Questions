@@ -6,6 +6,7 @@ A collection of TestDome questions and their solutions.
 
 - [Game Platform (Speed Calculator)](#game-platform)
 - [Reorder Tasks](#reorder-tasks)
+- [Mega Store](#mega-store)
 <!-- Add more questions as they come -->
 
 ## Game Platform
@@ -84,5 +85,30 @@ function initialize() {
       }
     });
   });
+}
+```
+
+## Mega Store
+
+### Solution
+
+```javascript
+function getDiscountedPrice(cartWeight, totalPrice, discountType) {
+  switch (discountType) {
+    case DiscountType.Standard:
+      return (totalPrice = totalPrice - (6 / 100) * totalPrice);
+
+    case DiscountType.Seasonal:
+      return (totalPrice = totalPrice - (12 / 100) * totalPrice);
+
+    case DiscountType.Weight:
+      return (totalPrice =
+        cartWeight <= 10
+          ? totalPrice - (6 / 100) * totalPrice
+          : totalPrice - (18 / 100) * totalPrice);
+
+    default:
+      return totalPrice;
+  }
 }
 ```
