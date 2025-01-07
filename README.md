@@ -12,7 +12,7 @@ A collection of TestDome questions and their solutions.
 ### Solution 1: Using Reduce
 
 ```javascript
-function calculateFinalSpeedReduce(initialSpeed, inclinations) {
+function calculateFinalSpeed(initialSpeed, inclinations) {
   try {
     const result = inclinations.reduce((speed, inclination) => {
       console.log("speed : ", speed, "and angle is ", inclination);
@@ -35,7 +35,7 @@ function calculateFinalSpeedReduce(initialSpeed, inclinations) {
 ### Solution 2: Using For Loop
 
 ```javascript
-function calculateFinalSpeedForLoop(initialSpeed, inclinations) {
+function calculateFinalSpeed(initialSpeed, inclinations) {
   if (initialSpeed <= 0) {
     return 0;
   }
