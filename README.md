@@ -5,6 +5,7 @@ A collection of TestDome questions and their solutions.
 ## Table of Contents
 
 - [Game Platform (Speed Calculator)](#game-platform)
+- [Reorder Tasks)](#reorder-tasks)
 <!-- Add more questions as they come -->
 
 ## Game Platform
@@ -58,4 +59,31 @@ function calculateFinalSpeed(initialSpeed, inclinations) {
 }
 ```
 
-<!-- New questions will be added here -->
+
+## Reorder Tasks
+
+### Solution
+
+```javascript
+function initialize() {
+  const buttons = document.querySelectorAll("button");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const clickedBtnParent = button.parentElement;
+      const currentSpan = clickedBtnParent.children.item(0);
+
+      const nextParent = button.parentElement?.nextElementSibling;
+      const prevParent = button.parentElement?.previousElementSibling;
+
+      if (button.className === "downButton") {
+        nextParent.prepend(currentSpan);
+        clickedBtnParent.prepend(nextParent.children.item(1));
+      } else {
+        prevParent.prepend(currentSpan);
+        clickedBtnParent.prepend(prevParent.children.item(1));
+      }
+    });
+  });
+}
+```
