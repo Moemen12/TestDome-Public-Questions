@@ -132,3 +132,20 @@ function newMessage(topicName) {
   return divElement;
 }
 ```
+
+## Endangered Species
+
+### Solution
+
+```javascript
+function endangeredSpecies(continent) {
+  const divElement = document.getElementsByTagName("li");
+
+  for (const li of divElement) {
+    const name = li.getAttribute("data-continent");
+    if (name === continent) {
+      return li.textContent;
+    }
+  }
+}
+```
