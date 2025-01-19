@@ -112,3 +112,23 @@ function getDiscountedPrice(cartWeight, totalPrice, discountType) {
   }
 }
 ```
+
+## Topic Coloring
+
+### Solution
+
+```javascript
+function newMessage(topicName) {
+  const divElement = document.getElementsByTagName("p");
+
+  for (const div of divElement) {
+    const name = div.getAttribute("data-topic-name");
+
+    if (name === topicName) {
+      div.style.backgroundColor = "red";
+    }
+  }
+
+  return divElement;
+}
+```
