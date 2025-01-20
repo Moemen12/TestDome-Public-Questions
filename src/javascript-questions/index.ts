@@ -10,6 +10,7 @@ import { canTravelTo, gameMatrix } from "./boat-movements.js";
 import { newMessage } from "./topic-coloring.js";
 import { endangeredSpecies } from "./endangered-species.js";
 import { registerHandlers } from "./closures.js";
+import { appendChildren } from "./loop.js";
 // console.log(calculateFinalSpeedForLoop(60, [0, 30, 0, -45, 0]));
 
 // console.log(calculateFinalSpeedReduce(60, [0, 30, 0, -45, 0]));
@@ -24,4 +25,6 @@ import { registerHandlers } from "./closures.js";
 // newMessage("discussion");
 // console.log(endangeredSpecies("North America"));
 
-registerHandlers();
+// registerHandlers();
+
+appendChildren(function (div) {});
