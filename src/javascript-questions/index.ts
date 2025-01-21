@@ -14,6 +14,7 @@ import { appendChildren } from "./loop.js";
 import { pipeline } from "./pipeline.js";
 import { setup as foodrank } from "./food-ranking.js";
 import { setup } from "./image-gallery.js";
+import { ensure } from "./ensure.js";
 // console.log(calculateFinalSpeedForLoop(60, [0, 30, 0, -45, 0]));
 
 // console.log(calculateFinalSpeedReduce(60, [0, 30, 0, -45, 0]));
@@ -42,3 +43,9 @@ import { setup } from "./image-gallery.js";
 // foodrank();
 
 // setup();
+
+// try {
+//   console.log(ensure("moemen"));
+// } catch (err) {
+//   console.log(err);
+// }

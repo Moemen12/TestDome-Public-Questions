@@ -14,6 +14,7 @@ A collection of TestDome questions and their solutions.
 - [Pipeline](#pipeline)
 - [Food Ranking](#food-ranking)
 - [Image Gallery](#image-gallery)
+- [Ensure](#ensure)
 
 <!-- Add more questions as they come -->
 
@@ -251,5 +252,16 @@ function setup() {
       clickedELementParent.remove();
     });
   });
+}
+```
+
+## Ensure
+
+### Solution
+
+```javascript
+function ensure(value) {
+  if (value === undefined) throw new Error("Value hasn't been passed");
+  return value;
 }
 ```
