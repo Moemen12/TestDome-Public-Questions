@@ -186,7 +186,7 @@ function appendChildren(decorateDiv) {
 }
 ```
 
-## Loop
+## Pipeline
 
 ### Solution
 
