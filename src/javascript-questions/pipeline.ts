@@ -1,4 +1,5 @@
 type Response = (arg: number) => number;
+
 export function pipeline(...funcs: Array<(x: number) => number>): Response {
   return (arg: number): number => {
     let initialValue = 0;

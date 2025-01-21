@@ -12,6 +12,7 @@ import { endangeredSpecies } from "./endangered-species.js";
 import { registerHandlers } from "./closures.js";
 import { appendChildren } from "./loop.js";
 import { pipeline } from "./pipeline.js";
+import { setup } from "./food-ranking.js";
 // console.log(calculateFinalSpeedForLoop(60, [0, 30, 0, -45, 0]));
 
 // console.log(calculateFinalSpeedReduce(60, [0, 30, 0, -45, 0]));
@@ -30,9 +31,11 @@ import { pipeline } from "./pipeline.js";
 
 // appendChildren(function (div) {});
 
-let fun = pipeline(
-  (x) => x * 3,
-  (x) => x + 1,
-  (x) => x / 2
-);
-console.log(fun(3)); // Should print 5
+// let fun = pipeline(
+//   (x) => x * 3,
+//   (x) => x + 1,
+//   (x) => x / 2
+// );
+// console.log(fun(3)); // Should print 5
+
+setup();

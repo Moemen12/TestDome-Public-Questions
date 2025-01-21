@@ -203,3 +203,27 @@ function pipeline(...funcs) {
   };
 }
 ```
+
+## Food Ranking
+
+### Solution
+
+```javascript
+function setup() {
+  const buttons = Array.from(document.getElementsByTagName("button"));
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const clickedELementParent = button.parentElement;
+      const prevParent = clickedELementParent.previousElementSibling;
+      const nextParent = clickedELementParent.nextElementSibling;
+      if (button.className === "up" && prevParent) {
+        clickedELementParent.after(prevParent);
+      }
+      if (button.className === "down" && nextParent) {
+        clickedELementParent.before(nextParent);
+      }
+    });
+  });
+}
+```
