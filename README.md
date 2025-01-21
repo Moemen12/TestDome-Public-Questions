@@ -185,3 +185,21 @@ function appendChildren(decorateDiv) {
   }
 }
 ```
+
+## Loop
+
+### Solution
+
+```javascript
+function pipeline(...funcs) {
+  return (arg) => {
+    let initialValue = 0;
+    for (const func of funcs) {
+      let value = func(initialValue === 0 ? arg : initialValue);
+      initialValue = value;
+    }
+
+    return initialValue;
+  };
+}
+```
