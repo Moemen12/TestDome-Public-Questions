@@ -13,6 +13,7 @@ A collection of TestDome questions and their solutions.
 - [Loop](#loop)
 - [Pipeline](#pipeline)
 - [Food Ranking](#food-ranking)
+- [Image Gallery](#image-gallery)
 
 <!-- Add more questions as they come -->
 
@@ -230,6 +231,24 @@ function setup() {
       if (button.className === "down" && nextParent) {
         clickedELementParent.before(nextParent);
       }
+    });
+  });
+}
+```
+
+## Image Gallery
+
+### Solution
+
+```javascript
+function setup() {
+  const buttons = Array.from(document.getElementsByTagName("button"));
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const clickedELementParent = button.parentElement;
+
+      clickedELementParent.remove();
     });
   });
 }
