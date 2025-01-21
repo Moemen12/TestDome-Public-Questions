@@ -7,6 +7,13 @@ A collection of TestDome questions and their solutions.
 - [Game Platform (Speed Calculator)](#game-platform)
 - [Reorder Tasks](#reorder-tasks)
 - [Mega Store](#mega-store)
+- [Topic Coloring](#topic-coloring)
+- [Endangered Species](#endangered-species)
+- [Closures](#closures)
+- [Loop](#loop)
+- [Pipeline](#pipeline)
+- [Food Ranking](#food-ranking)
+
 <!-- Add more questions as they come -->
 
 ## Game Platform
