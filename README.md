@@ -15,6 +15,7 @@ A collection of TestDome questions and their solutions.
 - [Food Ranking](#food-ranking)
 - [Image Gallery](#image-gallery)
 - [Ensure](#ensure)
+- [Two Sum](#two-sum)
 
 <!-- Add more questions as they come -->
 
@@ -263,5 +264,27 @@ function setup() {
 function ensure(value) {
   if (value === undefined) throw new Error("Value hasn't been passed");
   return value;
+}
+```
+
+## Two Sum
+
+### Solution
+
+```javascript
+function findTwoSum(numbers, sum) {
+  const seen = new Map();
+
+  for (let i = 0; i < numbers.length; i++) {
+    const current = numbers[i];
+    const needed = sum - current;
+
+    if (seen.has(needed)) {
+      return [seen.get(needed), i];
+    }
+    seen.set(current, i);
+  }
+
+  return null;
 }
 ```
