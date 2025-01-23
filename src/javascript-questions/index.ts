@@ -16,6 +16,7 @@ import { setup as foodrank } from "./food-ranking.js";
 import { setup } from "./image-gallery.js";
 import { ensure } from "./ensure.js";
 import { findTwoSum } from "./two-sum.js";
+import { createCheckDigit } from "./check-digit.js";
 // console.log(calculateFinalSpeedForLoop(60, [0, 30, 0, -45, 0]));
 
 // console.log(calculateFinalSpeedReduce(60, [0, 30, 0, -45, 0]));
@@ -53,3 +54,5 @@ import { findTwoSum } from "./two-sum.js";
 
 // const indices = findTwoSum([3, 1, 5, 7, 5, 9], 19);
 // console.log(indices);
+
+// console.log(createCheckDigit("55555"));

@@ -16,6 +16,7 @@ A collection of TestDome questions and their solutions.
 - [Image Gallery](#image-gallery)
 - [Ensure](#ensure)
 - [Two Sum](#two-sum)
+- [Check Digit](#check-digit)
 
 <!-- Add more questions as they come -->
 
@@ -286,5 +287,24 @@ function findTwoSum(numbers, sum) {
   }
 
   return null;
+}
+```
+
+## Check Digit
+
+### Solution
+
+```javascript
+function createCheckDigit(membershipId) {
+  let sum = membershipId;
+
+  while (sum.length > 1) {
+    sum = sum
+      .split("")
+      .reduce((acc, digit) => acc + parseInt(digit), 0)
+      .toString();
+  }
+
+  return parseInt(sum);
 }
 ```
