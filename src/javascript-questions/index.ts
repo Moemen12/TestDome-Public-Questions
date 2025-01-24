@@ -17,6 +17,7 @@ import { setup } from "./image-gallery.js";
 import { ensure } from "./ensure.js";
 import { findTwoSum } from "./two-sum.js";
 import { createCheckDigit } from "./check-digit.js";
+import { closestRelative } from "./closest-relative.js";
 // console.log(calculateFinalSpeedForLoop(60, [0, 30, 0, -45, 0]));
 
 // console.log(calculateFinalSpeedReduce(60, [0, 30, 0, -45, 0]));
@@ -56,3 +57,10 @@ import { createCheckDigit } from "./check-digit.js";
 // console.log(indices);
 
 // console.log(createCheckDigit("55555"));
+
+let parent = document.getElementsByTagName("James")[0];
+
+// console.log(parent);
+
+let relative = closestRelative(parent, "Mike");
+console.log(relative && relative.tagName); // prints MIKE
