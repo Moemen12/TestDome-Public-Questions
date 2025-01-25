@@ -17,6 +17,7 @@ A collection of TestDome questions and their solutions.
 - [Ensure](#ensure)
 - [Two Sum](#two-sum)
 - [Check Digit](#check-digit)
+- [Closest Relative](#closest-relative)
 
 <!-- Add more questions as they come -->
 
@@ -306,5 +307,30 @@ function createCheckDigit(membershipId) {
   }
 
   return parseInt(sum);
+}
+```
+
+## Closest Relative
+
+### Solution
+
+```javascript
+function closestRelative(parent, relativeName) {
+  const queue = Array.from(parent.children);
+  const tagName = relativeName.toUpperCase();
+
+  while (queue.length > 0) {
+    const current = queue.shift();
+
+    if (current?.tagName === tagName) {
+      return current;
+    }
+
+    if (current?.hasChildNodes()) {
+      queue.push(...Array.from(current.children));
+    }
+  }
+
+  return null;
 }
 ```

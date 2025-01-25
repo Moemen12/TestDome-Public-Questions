@@ -60,7 +60,5 @@ import { closestRelative } from "./closest-relative.js";
 
 let parent = document.getElementsByTagName("James")[0];
 
-// console.log(parent);
-
 let relative = closestRelative(parent, "Mike");
 console.log(relative && relative.tagName); // prints MIKE

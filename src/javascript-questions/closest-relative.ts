@@ -2,38 +2,52 @@ export function closestRelative(
   parent: Element,
   relativeName: string
 ): Element | null {
-  if (parent.nodeName === relativeName.toUpperCase()) {
-    return parent;
-  }
+  const queue = Array.from(parent.children);
+  const tagName = relativeName.toUpperCase();
 
-  for (const child of Array.from(parent.children)) {
-    const closestChild = closestRelative(child, relativeName);
-    if (closestChild) {
-      console.log(closestChild.textContent);
+  while (queue.length > 0) {
+    const current = queue.shift()!;
 
-      return closestChild;
+    if (current.tagName === tagName) {
+      return current;
+    }
+
+    // Only add children if they exist (optimization)
+    if (current.hasChildNodes()) {
+      queue.push(...Array.from(current.children));
     }
   }
 
   return null;
 }
+
 // Example case
 document.body.innerHTML =
   "<James>" +
-  "  <Mike>m</Mike>" +
+  "  <ali>" +
+  "    <Mike></Mike>" +
+  "  </ali>" +
+  "  <Mike></Mike>" +
   "  <Sarah>" +
-  "    <Mike>p</Mike>" +
+  "    <Mike></Mike>" +
   "  </Sarah>" +
   "</James>";
 
-/*
+// const queue: Element[] = Array.from(parent.children);
+// const tagName = relativeName.toUpperCase();
 
-  parent = James
+// while (queue.length > 0) {
+//   const current = queue.shift()!;
 
-  parent.children = [dave,sarah]
+//   // Use tagName instead of nodeName for consistency
+//   if (current.tagName === tagName) {
+//     return current;
+//   }
 
-  closestChild = 
+//   // Only add children if they exist (optimization)
+//   if (current.hasChildNodes()) {
+//     queue.push(...Array.from(current.children));
+//   }
+// }
 
-
-
-  */
+// return null;
