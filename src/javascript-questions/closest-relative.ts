@@ -3,6 +3,7 @@ export function closestRelative(
   relativeName: string
 ): Element | null {
   const queue = Array.from(parent.children);
+
   const tagName = relativeName.toUpperCase();
 
   while (queue.length > 0) {
@@ -12,7 +13,6 @@ export function closestRelative(
       return current;
     }
 
-    // Only add children if they exist (optimization)
     if (current.hasChildNodes()) {
       queue.push(...Array.from(current.children));
     }
@@ -32,22 +32,3 @@ document.body.innerHTML =
   "    <Mike></Mike>" +
   "  </Sarah>" +
   "</James>";
-
-// const queue: Element[] = Array.from(parent.children);
-// const tagName = relativeName.toUpperCase();
-
-// while (queue.length > 0) {
-//   const current = queue.shift()!;
-
-//   // Use tagName instead of nodeName for consistency
-//   if (current.tagName === tagName) {
-//     return current;
-//   }
-
-//   // Only add children if they exist (optimization)
-//   if (current.hasChildNodes()) {
-//     queue.push(...Array.from(current.children));
-//   }
-// }
-
-// return null;

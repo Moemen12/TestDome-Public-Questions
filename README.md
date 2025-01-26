@@ -18,6 +18,7 @@ A collection of TestDome questions and their solutions.
 - [Two Sum](#two-sum)
 - [Check Digit](#check-digit)
 - [Closest Relative](#closest-relative)
+- [Customer List](#customer-list)
 
 <!-- Add more questions as they come -->
 
@@ -332,5 +333,34 @@ function closestRelative(parent, relativeName) {
   }
 
   return null;
+}
+```
+
+## Customer List
+
+### Solution
+
+```javascript
+function showCustomers(customers, targetList) {
+  const ul = document.querySelector("ul");
+
+  customers.forEach((customer) => {
+    const li = document.createElement("li");
+    const p = document.createElement("p");
+    const email = document.createElement("p");
+
+    p.textContent = customer.name;
+    email.textContent = customer.email;
+    li.append(p);
+    ul.append(li);
+
+    p.addEventListener("click", () => {
+      if (li.contains(email)) {
+        li.removeChild(email);
+        return;
+      }
+      li.append(email);
+    });
+  });
 }
 ```

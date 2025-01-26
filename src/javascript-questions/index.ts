@@ -18,6 +18,7 @@ import { ensure } from "./ensure.js";
 import { findTwoSum } from "./two-sum.js";
 import { createCheckDigit } from "./check-digit.js";
 import { closestRelative } from "./closest-relative.js";
+import { showCustomers } from "./customer-list.js";
 // console.log(calculateFinalSpeedForLoop(60, [0, 30, 0, -45, 0]));
 
 // console.log(calculateFinalSpeedReduce(60, [0, 30, 0, -45, 0]));
@@ -58,7 +59,13 @@ import { closestRelative } from "./closest-relative.js";
 
 // console.log(createCheckDigit("55555"));
 
-let parent = document.getElementsByTagName("James")[0];
+// let parent = document.getElementsByTagName("James")[0];
 
-let relative = closestRelative(parent, "Mike");
-console.log(relative && relative.tagName); // prints MIKE
+// let relative = closestRelative(parent, "Mike");
+// console.log(relative && relative.tagName); // prints MIKE
+
+// let customers = [
+//   { name: "John", email: "john@example.com" },
+//   { name: "Mary", email: "mary@example.com" },
+// ];
+// showCustomers(customers, document.getElementById("customers") as HTMLElement);
