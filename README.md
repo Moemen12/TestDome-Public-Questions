@@ -19,6 +19,7 @@ A collection of TestDome questions and their solutions.
 - [Check Digit](#check-digit)
 - [Closest Relative](#closest-relative)
 - [Customer List](#customer-list)
+- [Malware Analysis](#malware-analysis)
 
 <!-- Add more questions as they come -->
 
@@ -362,5 +363,45 @@ function showCustomers(customers, targetList) {
       li.append(email);
     });
   });
+}
+```
+
+### Malware Analysis
+
+### Solution
+
+```javascript
+function simulate(entries) {
+  const positionsToChange = [];
+
+  for (let x = 0; x < entries.length; x++) {
+    const currentValue = entries[x];
+    const tlPosition = x - 3;
+    const trPosition = x + 4;
+
+    let shouldChange = false;
+
+    if (tlPosition >= 0) {
+      if (entries[tlPosition] >= currentValue) {
+        shouldChange = true;
+      }
+    }
+
+    if (trPosition < entries.length) {
+      if (entries[trPosition] >= currentValue) {
+        shouldChange = true;
+      }
+    }
+
+    if (shouldChange) {
+      positionsToChange.push(x);
+    }
+  }
+
+  const result = [...entries];
+  for (const pos of positionsToChange) {
+    result[pos] = 0;
+  }
+  return result;
 }
 ```

@@ -19,6 +19,7 @@ import { findTwoSum } from "./two-sum.js";
 import { createCheckDigit } from "./check-digit.js";
 import { closestRelative } from "./closest-relative.js";
 import { showCustomers } from "./customer-list.js";
+import { simulate } from "./malware-analysis.js";
 // console.log(calculateFinalSpeedForLoop(60, [0, 30, 0, -45, 0]));
 
 // console.log(calculateFinalSpeedReduce(60, [0, 30, 0, -45, 0]));
@@ -69,3 +70,8 @@ import { showCustomers } from "./customer-list.js";
 //   { name: "Mary", email: "mary@example.com" },
 // ];
 // showCustomers(customers, document.getElementById("customers") as HTMLElement);
+
+// const records = [1, 2, 0, 5, 0, 2, 4, 3, 3, 3];
+// console.log(simulate(records));
+// Expected output
+// [1, 0, 0, 5, 0, 0, 0, 3, 3, 0]
